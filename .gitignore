@@ -1,0 +1,6 @@
+clean
+arxiv
+media
+flatten
+
+!flatten/sn-*

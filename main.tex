@@ -1,0 +1,102 @@
+\documentclass[a4paper]{article}
+
+\IfFileExists{header.tex}{\input{header}}{}
+
+
+\usepackage[pages=all, color=black, position={current page.south}, placement=bottom, scale=1, opacity=1, vshift=5mm]{background}
+\SetBgContents{
+	\tt No copyright specified
+}      % copyright
+
+\usepackage[margin=1in]{geometry} % full-width
+
+% AMS Packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% Unicode
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+	unicode,
+%	colorlinks,
+%	breaklinks,
+%	urlcolor=cyan,
+%	linkcolor=blue,
+	pdfauthor={\input{authors}},
+	pdftitle={\input{paperaj/title}},
+	% pdfsubject={A simple article template},
+	pdfkeywords={\input{keywords}},
+	% pdfproducer={LaTeX},
+	% pdfcreator={pdflatex}
+}
+
+% Natbib
+\usepackage[sort&compress,numbers,square]{natbib}
+\bibliographystyle{apalike}
+
+% Theorem, Lemma, etc
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}{Claim}[theorem]
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{criterion}[theorem]{Criterion}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{principle}[theorem]{Principle}
+
+
+%\usepackage[linesnumbered,ruled,vlined,commentsnumbered]{algorithm2e} % use algorithm2e for typesetting algorithms
+\usepackage{algorithm, algpseudocode} % use algorithm and algorithmicx for typesetting algorithms
+\usepackage{mathrsfs} % for \mathscr command
+
+\usepackage{lipsum}
+
+% Author info
+\title{\IfFileExists{paperaj/title.tex}{\input{paperaj/title}}{Title here}}
+\author{\IfFileExists{paperaj/author.tex}{\input{paperaj/author}}{author here}}
+
+\date{
+	$^1$Organization 1 \\ \texttt{\{auth1, auth3\}@org1.edu}\\%
+	$^2$Organization 2 \\ \texttt{auth3@inst2.edu}\\[2ex]%
+%	\today
+}
+
+\begin{document}
+	\maketitle
+
+	\begin{abstract}
+        \IfFileExists{paperaj/abstract.tex}{\input{paperaj/abstract}}{abstract here} \\ \\
+		\noindent\textbf{Keywords:} \IfFileExists{keywords.tex}{\input{keywords}}{keywords here}
+	\end{abstract}
+
+	\tableofcontents
+
+    \IfFileExists{inclusions.tex}{\input{inclusions}}{inclusions here}
+
+	% \paragraph{Acknowledgements} \lipsum[6]
+
+%	\newpage
+	\bibliography{references}
+
+
+
+	% \appendix
+
+	% \section{Omitted Proof in Section~\ref{sec:examples}}
+	% \label{app:1}
+
+	% \lipsum[7]
+
+\end{document}

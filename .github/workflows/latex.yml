@@ -1,0 +1,31 @@
+name: latex-compile
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Run paperaj
+        uses: dermatologist/paperaj@master
+        with:
+          env-file: paperaj.env
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: clean
+          root_file: main.tex
+      - name: Upload LaTeX pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: article
+          path: clean/main.pdf
+          retention-days: 5
+

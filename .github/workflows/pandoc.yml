@@ -1,0 +1,25 @@
+name: create-latex
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Run paperaj
+        uses: dermatologist/paperaj@master
+        with:
+          env-file: paperaj.env
+      - name: Upload latex zip
+        uses: actions/upload-artifact@v2
+        with:
+          name: latex
+          path: clean/
+          retention-days: 3

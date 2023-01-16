@@ -1,6 +1,6 @@
 # paperaj-template
 
-## paperaj
+## This is a template that uses [paperaj](https://github.com/dermatologist/paperaj) as a GitHub action.
 
 Paperaj is a combination of bash and python scripts for converting MS word document to a latex document for academic journals. You can use any journal template for latex compilation. This can be used as a standalone script (needs pandoc and latex installed) or as a GitHub action. **Just create a repo from this template that uses [Paperaj](https://github.com/dermatologist/paperaj) GitHub action and the GitHub will latex-compile your manuscript!**
 

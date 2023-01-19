@@ -1,4 +1,4 @@
-# paperaj-template
+# paperaj-template - Write jounal papers in word and convert to LaTeX for submission! (All using GitHub actions!)
 
 ## This is a template that uses [paperaj](https://github.com/dermatologist/paperaj) as a GitHub action.
 
@@ -8,7 +8,7 @@ Paperaj is a combination of bash and python scripts for converting MS word docum
 [![paperaj](https://github.com/dermatologist/paperaj/blob/develop/paperaj.drawio.svg)](https://github.com/dermatologist/paperaj/blob/develop/paperaj.drawio.svg)
 
 ## How it works
-Paperaj creates a set of plain latex files from the word document in the paperaj folder. Images, tables and referencing are supported during the conversion. These plain latex files can be included in the journal's latex template using: ``` \input{filename} ```. See [main.docx](https://github.com/dermatologist/paperaj-public-template/blob/master/main.docx) in the template for examples. Just use this template that uses Paperaj GitHub action and the GitHub will latex-compile your manuscript!
+Paperaj creates a set of plain latex files from the word document in the paperaj folder. Images, tables and referencing are supported during the conversion. These plain latex files can be included in the journal's latex template using: ``` \input{filename} ```. See [main.docx](https://github.com/dermatologist/paperaj-public-template/blob/master/main.docx) in the template for word document format. See [main.tex](https://github.com/dermatologist/paperaj-public-template/blob/master/main.tex) in the template to see how you can include paperaj generated latex files in the latex entry file. Just use this template that uses [Paperaj GitHub action](https://github.com/dermatologist/paperaj) and the **GitHub will latex-compile your manuscript!**
 
 ## Usage
 
@@ -16,7 +16,7 @@ Paperaj creates a set of plain latex files from the word document in the paperaj
 * Use this [github template](https://github.com/dermatologist/paperaj-public-template)
 * Use the docx in the template
 * Add bib and tex files.
-* set the names of docx, bib and latex entry in paperaj.env file 
+* set the names of docx, bib and latex entry in paperaj.env file
 * This template generates LaTeX files on push to develop branch and compile to PDF on push to main branch!
 
 

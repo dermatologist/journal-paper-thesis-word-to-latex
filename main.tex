@@ -24,10 +24,10 @@
 %	breaklinks,
 %	urlcolor=cyan,
 %	linkcolor=blue,
-	pdfauthor={\input{authors}},
-	pdftitle={\input{paperaj/title}},
+	pdfauthor={\input{paperaj/chapter-02.tex}},
+	pdftitle={\input{paperaj/chapter-01.tex}},
 	% pdfsubject={A simple article template},
-	pdfkeywords={\input{keywords}},
+	pdfkeywords={\input{keywords}},  % Keywords can also be a section in the word document
 	% pdfproducer={LaTeX},
 	% pdfcreator={pdflatex}
 }
@@ -64,8 +64,8 @@
 \usepackage{lipsum}
 
 % Author info
-\title{\IfFileExists{paperaj/title.tex}{\input{paperaj/title}}{Title here}}
-\author{\IfFileExists{paperaj/author.tex}{\input{paperaj/author}}{author here}}
+\title{\IfFileExists{paperaj/title.tex}{\input{paperaj/chapter-01.tex}}{Title here}}
+\author{\IfFileExists{paperaj/author.tex}{\input{paperaj/chapter-02.tex}}{author here}}
 
 \date{
 	$^1$Organization 1 \\ \texttt{\{auth1, auth3\}@org1.edu}\\%
@@ -77,7 +77,7 @@
 	\maketitle
 
 	\begin{abstract}
-        \IfFileExists{paperaj/abstract.tex}{\input{paperaj/abstract}}{abstract here} \\ \\
+        \IfFileExists{paperaj/abstract.tex}{\input{paperaj/chapter-03.tex}}{abstract here} \\ \\
 		\noindent\textbf{Keywords:} \IfFileExists{keywords.tex}{\input{keywords}}{keywords here}
 	\end{abstract}
 
@@ -85,18 +85,7 @@
 
     \IfFileExists{inclusions.tex}{\input{inclusions}}{inclusions here}
 
-	% \paragraph{Acknowledgements} \lipsum[6]
 
-%	\newpage
 	\bibliography{references}
-
-
-
-	% \appendix
-
-	% \section{Omitted Proof in Section~\ref{sec:examples}}
-	% \label{app:1}
-
-	% \lipsum[7]
 
 \end{document}

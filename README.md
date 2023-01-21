@@ -1,9 +1,11 @@
-# paperaj-template - Write jounal papers in word and convert to LaTeX for submission! (All using GitHub actions!)
+# paperaj-template - Write jounal papers or thesis in word and convert to LaTeX for submission! (All using GitHub actions!)
+
+TL;DR: *You can use any LaTeX template! Sections in the word document ([see main.docx](main.docx)) with italicized headings are split into latex files that can be included into your template*
+See example in [main.tex](main.tex) and [inclusions.tex](inclusions.tex)
 
 ## This is a template that uses [paperaj](https://github.com/dermatologist/paperaj) as a GitHub action.
 
 Paperaj is a combination of bash and python scripts for converting MS word document to a latex document for academic journals. You can use any journal template for latex compilation. This can be used as a standalone script (needs pandoc and latex installed) or as a GitHub action. **Just create a repo from this template that uses [Paperaj](https://github.com/dermatologist/paperaj) GitHub action and the GitHub will latex-compile your manuscript!**
-
 
 [![paperaj](https://github.com/dermatologist/paperaj/blob/develop/paperaj.drawio.svg)](https://github.com/dermatologist/paperaj/blob/develop/paperaj.drawio.svg)
 
@@ -20,7 +22,7 @@ Paperaj creates a set of plain latex files from the word document in the paperaj
 * This template generates LaTeX files on push to develop branch and compile to PDF on push to main branch!
 
 
-### Arguments in .env file
+### Arguments in .env file (Needed only if compiling locally)
 
 * BIBLIO=references.bib
 * DOCX=article.docx
@@ -80,3 +82,10 @@ Paperaj creates a set of plain latex files from the word document in the paperaj
 
 * set repo permissions to read/write
 * set entry.tex as overleaf entry
+
+
+## Give us a star ⭐️
+If you find this project useful, give us a star. It helps others discover the project.
+## Contributors
+
+* [Bell Eapen](https://nuchange.ca) | [![Twitter Follow](https://img.shields.io/twitter/follow/beapen?style=social)](https://twitter.com/beapen)

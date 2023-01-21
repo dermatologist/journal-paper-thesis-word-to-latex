@@ -19,7 +19,7 @@ Paperaj creates a set of plain latex files from the word document in the paperaj
 * Use the docx in the template
 * Add bib and tex files.
 * set the names of docx, bib and latex entry in paperaj.env file
-* This template generates LaTeX files on push to develop branch and compile to PDF on push to main branch!
+* This template **generates LaTeX files on push to develop branch** and **compile to PDF on push to main branch!**
 
 
 ### Arguments in .env file (Needed only if compiling locally)

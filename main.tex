@@ -27,7 +27,7 @@
 	pdfauthor={\input{paperaj/chapter-02.tex}},
 	pdftitle={\input{paperaj/chapter-01.tex}},
 	% pdfsubject={A simple article template},
-	pdfkeywords={\input{keywords}},  % Keywords can also be a section in the word document
+	pdfkeywords={\input{paperaj/chapter-04.tex}},  % Keywords can also be a section in the word document
 	% pdfproducer={LaTeX},
 	% pdfcreator={pdflatex}
 }
@@ -77,8 +77,8 @@
 	\maketitle
 
 	\begin{abstract}
-        \IfFileExists{paperaj/abstract.tex}{\input{paperaj/chapter-03.tex}}{abstract here} \\ \\
-		\noindent\textbf{Keywords:} \IfFileExists{keywords.tex}{\input{keywords}}{keywords here}
+        \IfFileExists{paperaj/abstract.tex}{\input{paperaj/chapter-03.tex}}{abstract here}
+		\noindent\textbf{Keywords:} \IfFileExists{paperaj/chapter-04.tex}{\input{paperaj/chapter-04.tex}}{keywords here}
 	\end{abstract}
 
 	\tableofcontents

@@ -23,6 +23,8 @@ If you find this project useful, give us a star. It helps others discover the pr
 * set the names of docx, bib and latex entry in paperaj.env file
 * This template **generates LaTeX files on push to develop branch** and **compile to PDF on push to main branch!**
 
+### If you want to run this locally in your computer (requires pandoc and latex installed), check out [paperaj.](https://github.com/dermatologist/paperaj)
+
 
 ### Arguments in .env file (Needed only if compiling locally)
 
